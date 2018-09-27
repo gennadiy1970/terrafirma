@@ -1,13 +1,12 @@
 # Terra firma
 
-1. [Terra firma](#terra-firma)
-  1. [Installation](#installation)
-  2. [Basic usage](#basic-usage)
-  3. [Basic folder structure](#basic-folder-structure)
-  4. [Configuration](#configuration)
-  5. [Templating](#templating)
-  6. [Data binding](#data-binding)
-  7. [Additional resources](#additional-resources)
+1. [Installation](#installation)
+2. [Basic usage](#basic-usage)
+3. [Basic folder structure](#basic-folder-structure)
+4. [Configuration](#configuration)
+5. [Templating](#templating)
+6. [Data binding](#data-binding)
+7. [Additional resources](#additional-resources)
 
 ## Installation
 
