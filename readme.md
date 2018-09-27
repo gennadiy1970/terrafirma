@@ -1,6 +1,4 @@
 # Terra firma
-Todo …
-
 
 ## Installation
 
