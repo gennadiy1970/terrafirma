@@ -55,7 +55,7 @@ In order to keep everything nifty there is predefined folder structure that **sh
   - javascript (all the JavaScript for frontend)
   - layout (Handlebars layouts)
   - partials (Handlebars partials)
-  - scss (Sass files - Gulps looks for base.scss as entrypoint)
+  - scss (Sass files - Gulp looks for base.scss as entrypoint)
 
 
 ## Configuration
