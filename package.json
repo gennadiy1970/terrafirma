@@ -4,9 +4,7 @@
 	"description": "Web application boilerplate",
 	"private": true,
 	"scripts": {
-		"dev": "webpack --watch --mode development",
-		"build": "webpack --mode production",
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"dev": "gulp dev --mode development"
 	},
 	"repository": {
 		"type": "git",

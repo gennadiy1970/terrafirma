@@ -13,11 +13,13 @@
 
 	<h1>{{data.title}}</h1>
 
-	{{#times 115}}
-	<p>{{this}}</p>
-	{{/times}}
+	<hr>
 
-	<img src="static/1.jpg">
+	{{#each articles}}
+	<h3>{{title}}</h3>
+	<p>{{content}}</p>
+	<hr>
+	{{/each}}
 
 </body>
 

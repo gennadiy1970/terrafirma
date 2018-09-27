@@ -31,7 +31,7 @@ gulp.task('sass', () => gulp.src(`${config.paths.source}/scss/**/base.scss`)
 
 gulp.task('handlebars', () => {
 	const handlebarsStream = handlebars({
-			debug: false
+			debug: true
 		})
 		.partials(`${config.paths.source}/partials/**/*.hbs`)
 		.helpers(`${config.paths.source}/helpers/**/*.js`)
@@ -68,7 +68,10 @@ let watchers = () => {
 		awaitWriteFinish: true,
 	}).on('change', gulp.series('sass', browserSync.reload));
 
-	gulp.watch([`${config.paths.source}/pages/**/*.hbs`, `${config.paths.source}/partials/**/*.hbs`], {
+	gulp.watch([
+		`${config.paths.source}/pages/**/*.hbs`,
+		`${config.paths.source}/partials/**/*.hbs`,
+		`${config.paths.source}/data/**/*.{js,json}`], {
 		awaitWriteFinish: true,
 	}).on('change', gulp.series('handlebars', browserSync.reload));
 
@@ -76,4 +79,4 @@ let watchers = () => {
 
 };
 
-gulp.task('default', gulp.series('delete:all', 'sass', 'javascript', 'handlebars', 'copy:assets', 'serve', [watchers]));
+gulp.task('dev', gulp.series('delete:all', 'sass', 'javascript', 'handlebars', 'copy:assets', 'serve', [watchers]));
