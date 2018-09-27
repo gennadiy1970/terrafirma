@@ -80,6 +80,8 @@ By default this list is not displayed, but if you enable `debugHandlebars`  in `
 
 Helpers included: JSONparse, decodeURI, hyphenate, JSONstringify, default, i18n, _debug, dirname, if, _inspect, divide, ifEven, abs, dotcase, ifNth, absolute, downcase, ifOdd, add, each, inArray, addCommas, eachIndex, inflect, after, ellipsis, info, and, embed, is, append, encodeURI, isArray, arrayify, eq, isEmpty, attr, equalsLength, isFalsey, avg, error, isMatch, basename, escape, isObject, before, extend, isString, block, extname, isTruthy, blockHelperMissing, fileSize, isnt, bold, filter, itemAt, bytes, first, iterate, camelcase, floor, join, capitalize, forEach, js, capitalizeAll, forIn, jsfiddle, ceil, forOwn, last, center, frame, length, chop, get, lengthEqual, compare, getObject, log, contains, gist, lookup, content, gt, lowercase, css, gte, lt, danger, has, lte, dashcase, hasOwn, map, date, helperMissing, markdown, match, removeFirst, toPrecision, md, repeatNTimes, toRegex, merge, replace, trim, minus, replaceFirst, trimLeft, mm, resolve, trimRight, modulo, reverse, truncate, moment, round, truncateWords, multiply, sanitize, typeOf, neither, segments, ul, noop, sentence, unique, not, snakecase, unless, occurrences, some, unlessEq, ok, sort, unlessGt, ol, sortBy, unlessGteq, option, split, unlessLt, or, startsWith, unlessLteq, ordinalize, stem, upcase, parseJSON, stringify, uppercase, pascalcase, stripProtocol, urlParse, pathcase, stripQuerystring, urlResolve, phoneNumber, subtract, url_decode, pick, success, url_encode, pluck, sum, warn, plus, test, warning, plusify, thumbnailImage, with, prepend, times, withAfter, random, titleize, withBefore, raw, toAbbr, withFirst, read, toExponential, withGroup, readdir, toFixed, withHash, relative, toFloat, withLast, remainder, toInt, withSort, remove, toPath, year.
 
+For more info about preloaded helpers consult github page https://github.com/helpers/handlebars-helpers.
+
 You can define new helper by adding file into source/helpers folder and by following this notation.
 
 ```js
@@ -128,4 +130,3 @@ On Mac you can use [Smart JSON Editor](https://itunes.apple.com/us/app/smart-jso
 
 ## Additional resources
 - https://www.npmjs.com/package/handlebars-layouts
-- https://github.com/helpers/handlebars-helpers
