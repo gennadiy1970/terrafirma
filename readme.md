@@ -99,7 +99,7 @@ module.exports.register = function (Handlebars) {
 
 ## Data binding
 
-If you add JSON file into source/data this file is automatically included in template. Filename without extension is used for variable name. So in case you have created `articles.json` then `article` variable is pushed into template. You can check which JSON files are being pushed into template.
+If you add JSON file into source/data this file is automatically included in template. Filename without extension is used for variable name. So in case you have created `articles.json` then `articles` variable is pushed into template. You can check which JSON files are being pushed into template.
 
 Then you can loop through items like you would normally do in Handlebars.
 
