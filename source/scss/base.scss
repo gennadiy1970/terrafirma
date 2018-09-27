@@ -1,13 +1,8 @@
-@import 'reset';
-@import 'headings';
+@charset 'utf-8';
 
-// variables
-$font-stack: Helvetica;
-$primary-color: #333;
+@import 'variables.scss';
 
-body {
-	font: 100% $font-stack;
-	color: $primary-color;
-	background: cyan;
-	padding: 50px;
-}
+@import 'reset.scss';
+@import 'header.scss';
+@import 'main.scss';
+@import 'footer.scss';

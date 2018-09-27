@@ -25,6 +25,8 @@
 		"gulp-hb": "^7.0.1",
 		"gulp-rename": "^1.4.0",
 		"gulp-sass": "^4.0.1",
-		"gulp-sourcemaps": "^2.6.4"
+		"gulp-sourcemaps": "^2.6.4",
+		"handlebars-helpers": "^0.10.0",
+		"handlebars-layouts": "^3.1.4"
 	}
 }

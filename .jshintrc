@@ -1,6 +1,6 @@
 {
-	"strict": false,
 	"esversion": 6,
+	"strict": false,
 	"curly": true,
 	"noempty": true,
 	"trailing": true,

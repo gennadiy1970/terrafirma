@@ -31,15 +31,18 @@ gulp.task('sass', () => gulp.src(`${config.paths.source}/scss/**/base.scss`)
 
 gulp.task('handlebars', () => {
 	const handlebarsStream = handlebars({
-			debug: true
+			debug: config.debugHandlebars
 		})
 		.partials(`${config.paths.source}/partials/**/*.hbs`)
+		.partials(`${config.paths.source}/layouts/**/*.hbs`)
+		.helpers(require('handlebars-helpers'))
+		.helpers(require('handlebars-layouts'))
 		.helpers(`${config.paths.source}/helpers/**/*.js`)
 		.data(`${config.paths.source}/data/**/*.{js,json}`);
 
 	return gulp.src(`${config.paths.source}/pages/**/*.hbs`)
 		.pipe(handlebarsStream)
-		.pipe(rename(function(path) {
+		.pipe(rename(function (path) {
 			path.extname = '.html';
 		}))
 		.pipe(gulp.dest(config.paths.destination));
@@ -71,6 +74,8 @@ let watchers = () => {
 	gulp.watch([
 		`${config.paths.source}/pages/**/*.hbs`,
 		`${config.paths.source}/partials/**/*.hbs`,
+		`${config.paths.source}/layouts/**/*.hbs`,
+		`${config.paths.source}/helpers/**/*.js`,
 		`${config.paths.source}/data/**/*.{js,json}`], {
 		awaitWriteFinish: true,
 	}).on('change', gulp.series('handlebars', browserSync.reload));
