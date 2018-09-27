@@ -85,13 +85,13 @@ You can define new helper by adding file into source/helpers folder and by follo
 
 ```js
 module.exports.register = function (Handlebars) {
-	Handlebars.registerHelper('repeatNTimes', function (n, block) {
-		var accum = '';
-		for (var i = 0; i < n; ++i) {
-			accum += block.fn(i);
-		}
-		return accum;
-	});
+  Handlebars.registerHelper('repeatNTimes', function (n, block) {
+    var accum = '';
+    for (var i = 0; i < n; ++i) {
+      accum += block.fn(i);
+    }
+    return accum;
+  });
 };
 ```
 
@@ -105,25 +105,23 @@ Then you can loop through items like you would normally do in Handlebars.
 **articles.json**
 
 ```json
-[
-	{
-		"title": "Some title 1",
-		"contents": "some content"
-	}, {
-		"title": "Some title 2",
-		"contents": "some content"
-	}
-]
+[{
+  "title": "Some title 1",
+  "contents": "some content"
+  }, {
+  "title": "Some title 2",
+  "contents": "some content"
+}]
 ```
 
 **test.hbs**
 
 ```handlebars
 {{#each articles}}
-<div class="card">
-	<h3>{{title}}</h3>
-	<p>{{contents}}</p>
-</div>
+  <div class="card">
+    <h3>{{title}}</h3>
+    <p>{{contents}}</p>
+  </div>
 {{/each}}
 ```
 
