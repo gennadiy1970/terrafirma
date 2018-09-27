@@ -1,5 +1,6 @@
 # Terra firma
 
+
 ## Installation
 
 Install by using `npm install` command. If there are any errors use `npm audit fix --force`.
@@ -122,6 +123,8 @@ Then you can loop through items like you would normally do in Handlebars.
   </div>
 {{/each}}
 ```
+
+On Mac you can use [Smart JSON Editor](https://itunes.apple.com/us/app/smart-json-editor/id1268962404) to easily edit data files.
 
 ## Additional resources
 - https://www.npmjs.com/package/handlebars-layouts
