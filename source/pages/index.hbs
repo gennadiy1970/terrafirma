@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>test</title>
+	<link rel="stylesheet" href="/static/bundle.css">
+</head>
+
+<body>
+
+	{{> header title="Header partial"}}
+
+	<h1>{{data.title}}</h1>
+
+	{{#times 115}}
+	<p>{{this}}</p>
+	{{/times}}
+
+	<img src="static/1.jpg">
+
+</body>
+
+</html>

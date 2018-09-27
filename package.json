@@ -1,23 +1,32 @@
 {
-  "name": "terrafirma",
-  "version": "1.0.0",
-  "description": "Web application boilerplate",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mitjafelicijan/terrafirma.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/mitjafelicijan/terrafirma/issues"
-  },
-  "homepage": "https://github.com/mitjafelicijan/terrafirma#readme",
-  "devDependencies": {
-    "webpack": "^4.20.2",
-    "webpack-cli": "^3.1.1"
-  }
+	"name": "terrafirma",
+	"version": "1.0.0",
+	"description": "Web application boilerplate",
+	"private": true,
+	"scripts": {
+		"dev": "webpack --watch --mode development",
+		"build": "webpack --mode production",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/mitjafelicijan/terrafirma.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/mitjafelicijan/terrafirma/issues"
+	},
+	"homepage": "https://github.com/mitjafelicijan/terrafirma#readme",
+	"devDependencies": {
+		"browser-sync": "^2.24.7",
+		"del": "^3.0.0",
+		"gulp": "^4.0.0",
+		"gulp-autoprefixer": "^6.0.0",
+		"gulp-concat": "^2.6.1",
+		"gulp-hb": "^7.0.1",
+		"gulp-rename": "^1.4.0",
+		"gulp-sass": "^4.0.1",
+		"gulp-sourcemaps": "^2.6.4"
+	}
 }

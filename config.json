@@ -1,0 +1,12 @@
+{
+	"browserSync": {
+		"host": "0.0.0.0",
+		"baseDir": "./dist",
+		"openOnStart": false
+	},
+	"paths": {
+		"source": "./source",
+		"destination": "./dist",
+		"assets": "./source/assets"
+	}
+}

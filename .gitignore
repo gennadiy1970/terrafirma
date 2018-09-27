@@ -1,2 +1,20 @@
+# folders
 node_modules/
+jspm_packages/
+dist/
+design/
+.npm
+
+# files
+*.sublime-workspace
 package-lock.json
+.DS_Store
+*.log
+.idea
+.vscode
+pids
+*.pid
+*.seed
+.grunt
+.lock-wscript
+.env

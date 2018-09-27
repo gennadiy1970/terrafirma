@@ -1,0 +1,13 @@
+@import 'reset';
+@import 'headings';
+
+// variables
+$font-stack: Helvetica;
+$primary-color: #333;
+
+body {
+	font: 100% $font-stack;
+	color: $primary-color;
+	background: cyan;
+	padding: 50px;
+}
