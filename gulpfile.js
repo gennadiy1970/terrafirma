@@ -7,6 +7,8 @@ const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
 const handlebars = require('gulp-hb');
+const imageminrecompress = require('imagemin-jpeg-recompress');
+const imagemin = require('gulp-imagemin');
 const browserSync = require('browser-sync').create();
 
 gulp.task('javascript', () => gulp.src(`${config.paths.source}/javascript/**/*.js`)
@@ -56,10 +58,40 @@ gulp.task('serve', done => browserSync.init({
 	}
 }, () => done()));
 
-gulp.task('copy:assets', () => gulp.src(`${config.paths.source}/assets/**/*.*`)
+gulp.task('copy-assets', () => gulp.src(`${config.paths.source}/assets/**/*.*`)
 	.pipe(gulp.dest(`${config.paths.destination}/static`)));
 
-gulp.task('delete:all', () => del(config.paths.destination));
+gulp.task('delete-all', () => del(config.paths.destination));
+
+gulp.task('imagemin', () => gulp.src(`${config.paths.source}/assets/**/*.{jpg,jpeg,png,gif,svg}`)
+	.pipe(imagemin([
+		imageminrecompress({
+			progressive: true,
+			max: 84,
+			min: 70,
+		}),
+		imagemin.gifsicle({
+			interlaced: true
+		}),
+		imagemin.optipng({
+			optimizationLevel: 5
+		}),
+		imagemin.svgo({
+			plugins: [
+				{
+					removeViewBox: false
+				},
+				{
+					cleanupIDs: false
+				},
+				{
+					removeUselessDefs: false
+				},
+			],
+		})], {
+		verbose: true
+	}))
+	.pipe(gulp.dest(`${config.paths.destination}/static`)));
 
 let watchers = () => {
 
@@ -80,8 +112,9 @@ let watchers = () => {
 		awaitWriteFinish: true,
 	}).on('change', gulp.series('handlebars', browserSync.reload));
 
-	gulp.watch(`${config.paths.source}/assets/**/*.*`, gulp.series('copy:assets', browserSync.reload));
+	gulp.watch(`${config.paths.source}/assets/**/*.*`, gulp.series('copy-assets', browserSync.reload));
 
 };
 
-gulp.task('dev', gulp.series('delete:all', 'sass', 'javascript', 'handlebars', 'copy:assets', 'serve', [watchers]));
+gulp.task('development', gulp.series('delete-all', 'sass', 'javascript', 'handlebars', 'copy-assets', 'serve', [watchers]));
+gulp.task('production', gulp.series('delete-all', 'sass', 'javascript', 'handlebars', 'copy-assets', 'imagemin'));

@@ -4,7 +4,8 @@
 	"description": "Web application boilerplate",
 	"private": true,
 	"scripts": {
-		"dev": "gulp dev --mode development"
+		"development": "gulp development",
+		"production": "gulp production"
 	},
 	"repository": {
 		"type": "git",
@@ -23,10 +24,12 @@
 		"gulp-autoprefixer": "^6.0.0",
 		"gulp-concat": "^2.6.1",
 		"gulp-hb": "^7.0.1",
+		"gulp-imagemin": "^4.1.0",
 		"gulp-rename": "^1.4.0",
 		"gulp-sass": "^4.0.1",
 		"gulp-sourcemaps": "^2.6.4",
 		"handlebars-helpers": "^0.10.0",
-		"handlebars-layouts": "^3.1.4"
+		"handlebars-layouts": "^3.1.4",
+		"imagemin-jpeg-recompress": "^5.1.0"
 	}
 }
