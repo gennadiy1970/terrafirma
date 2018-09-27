@@ -83,17 +83,17 @@ Helpers included: JSONparse, decodeURI, hyphenate, JSONstringify, default, i18n,
 
 You can define new helper by adding file into source/helpers folder and by following this notation.
 
-
-    module.exports.register = function (Handlebars) {
-      Handlebars.registerHelper('repeatNTimes', function (n, block) {
-        var accum = '';
-        for (var i = 0; i < n; ++i) {
-          accum += block.fn(i);
-        }
-        return accum;
-      });
-    };
-
+```js
+module.exports.register = function (Handlebars) {
+	Handlebars.registerHelper('repeatNTimes', function (n, block) {
+		var accum = '';
+		for (var i = 0; i < n; ++i) {
+			accum += block.fn(i);
+		}
+		return accum;
+	});
+};
+```
 
 
 ## Data binding
@@ -104,25 +104,28 @@ Then you can loop through items like you would normally do in Handlebars.
 
 **articles.json**
 
-    [
-      {
-        "title": "Some title 1",
-        "contents": "some content"
-      }, {
-        "title": "Some title 2",
-        "contents": "some content"
-      }
-    ]
+```json
+[
+	{
+		"title": "Some title 1",
+		"contents": "some content"
+	}, {
+		"title": "Some title 2",
+		"contents": "some content"
+	}
+]
+```
 
 **test.hbs**
 
-    {{#each articles}}
-        <div class="card">
-            <h3>{{title}}</h3>
-            <p>{{contents}}</p>
-        </div>
-    {{/each}}
-
+```handlebars
+{{#each articles}}
+<div class="card">
+	<h3>{{title}}</h3>
+	<p>{{contents}}</p>
+</div>
+{{/each}}
+```
 
 ## Additional resources
 - https://www.npmjs.com/package/handlebars-layouts
