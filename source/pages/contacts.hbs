@@ -1,0 +1,27 @@
+{{#extend "base"}}
+    {{#content "meta"}}
+        {{> meta title="Contacts"}}
+    {{/content}}
+    {{#content "stylesheets"}}
+        {{> stylesheets }}
+    {{/content}}
+    {{#content "header"}}
+        {{> header title="Header partial"}}
+    {{/content}}
+
+    {{#content "main" mode="append"}}
+        {{#each articles}}
+            <div class="card">
+                <h3>{{title}}</h3>
+                <p>{{contents}}</p>
+            </div>
+        {{/each}}
+    {{/content}}
+
+    {{#content "footer" mode="prepend"}}
+        WTFPL License
+    {{/content}}
+    {{#content "scripts"}}
+        {{> scripts }}
+    {{/content}}
+{{/extend}}

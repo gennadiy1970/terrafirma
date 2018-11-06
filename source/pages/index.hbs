@@ -1,5 +1,11 @@
 {{#extend "base"}}
 
+	{{#content "meta"}}
+		{{> meta title="Home"}}
+	{{/content}}
+	{{#content "stylesheets"}}
+		{{> stylesheets }}
+	{{/content}}
 	{{#content "header"}}
 		{{> header title="Header partial"}}
 	{{/content}}
@@ -16,5 +22,7 @@
 	{{#content "footer" mode="prepend"}}
 		WTFPL License
 	{{/content}}
-
+	{{#content "scripts"}}
+		{{> scripts }}
+	{{/content}}
 {{/extend}}
